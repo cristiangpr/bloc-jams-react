@@ -12,7 +12,7 @@ class PlayerBar extends Component {
          <ion-icon name={this.props.isPlaying ? "pause" : "play"}></ion-icon>
 
        </button>
-       <button id="next">
+       <button id="next" onClick={this.props.handleNextClick}>
         <ion-icon name="skip-forward"></ion-icon>
        </button>
      </section>
