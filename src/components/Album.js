@@ -120,11 +120,13 @@ handleVolumeChange(e){
 formatTime(time){
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60);
-  var minSec = minutes + ':' + seconds;
-  if (seconds >= 0) {
-    return minSec;
-  } else {
-    return"-.--"
+  var minSec1 = minutes + ':' + 0 + seconds;
+  var minSec2 = minutes + ':' + seconds;
+  if (seconds < 10) {
+    return minSec1 || "-:--";
+  }
+  else {
+    return minSec2 || "-.--"
   }
 }
 
