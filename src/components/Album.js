@@ -66,11 +66,15 @@ class Album extends Component {
   handleSongClick(song) {
      const isSameSong = this.state.currentSong === song;
      if (this.state.isPlaying && isSameSong) {
+       console.log('pause');
+
        this.pause();
      }
        else {
          if (!isSameSong) { this.setSong(song); }
+         console.log('play');
          this.play();
+
        }
 }
    onHover(song){
